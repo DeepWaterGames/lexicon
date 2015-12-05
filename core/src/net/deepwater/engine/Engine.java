@@ -64,6 +64,8 @@ public class Engine
 		eventManager = new EventManager();
 
         inputProcessor = new InputProcessor();
+
+		Gdx.input.setInputProcessor(inputProcessor);
 		
 		return true;
 	}

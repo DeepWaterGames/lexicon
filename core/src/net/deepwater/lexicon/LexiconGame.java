@@ -19,8 +19,8 @@ public class LexiconGame extends ApplicationAdapter {
 
 		Entity player = engine.getEntityManager().createEntity("Bob");
 		player.setTextureName("Android/assets/badlogic.jpg");
-		new EntityPlayerMovementObserver();
-		player.setEntityObserver(new EntityPlayerMovementObserver());
+		new PlayerMovementObserver();
+		player.setEntityObserver(new PlayerMovementObserver());
 
 		OverlayScreen screen = engine.getOverlayManager().createOverlayScreen(true);
 		Entity panel = screen.createPanelEntity("Fred");

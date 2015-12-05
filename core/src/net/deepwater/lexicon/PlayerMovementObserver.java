@@ -1,17 +1,19 @@
 package net.deepwater.lexicon;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 
 import net.deepwater.engine.Entity;
 import net.deepwater.engine.EntityObserver;
 
-public class EntityPlayerMovementObserver extends EntityObserver {
+public class PlayerMovementObserver extends EntityObserver {
 
 	private Vector2 acceleration;
 	private Vector2 velocity;
 	private boolean move;
+	double targetY;
 	
-	public EntityPlayerMovementObserver()
+	public PlayerMovementObserver()
 	{
 		velocity = new Vector2();
 		acceleration = new Vector2();
@@ -79,7 +81,9 @@ public class EntityPlayerMovementObserver extends EntityObserver {
 	public boolean touchDragged(Entity entity, int screenX, int screenY,
 			int pointer) {
 		// TODO Auto-generated method stub
-		return super.touchDragged(entity, screenX, screenY, pointer);
+		targetY = screenY / Gdx.graphics.getHeight();
+//		return super.touchDragged(entity, screenX, screenY, pointer);
+		return true;
 	}
 
 	@Override
