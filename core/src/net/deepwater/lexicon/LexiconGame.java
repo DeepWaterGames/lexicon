@@ -1,11 +1,9 @@
 package net.deepwater.lexicon;
 
 import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+
 import net.deepwater.engine.Engine;
 import net.deepwater.engine.Entity;
-import net.deepwater.engine.EntityPlayerMovementObserver;
 import net.deepwater.engine.OverlayScreen;
 
 public class LexiconGame extends ApplicationAdapter {

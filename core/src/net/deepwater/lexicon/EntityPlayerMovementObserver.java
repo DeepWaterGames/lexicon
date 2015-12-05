@@ -1,6 +1,9 @@
-package net.deepwater.engine;
+package net.deepwater.lexicon;
 
 import com.badlogic.gdx.math.Vector2;
+
+import net.deepwater.engine.Entity;
+import net.deepwater.engine.EntityObserver;
 
 public class EntityPlayerMovementObserver extends EntityObserver {
 
