@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 
 public class Entity {
@@ -12,11 +13,7 @@ public class Entity {
 	protected Texture texture;
 	protected Sprite sprite;
 	protected SpriteBatch batch;
-	
-	protected float positionX;
-	protected float positionY;
-	
-	protected float rotation;
+
 	protected float scale;
 	
 	protected String name;
@@ -24,12 +21,13 @@ public class Entity {
 	protected String textureName;
 	
 	protected Rectangle bounds;
+
+	protected Vector2 position;
+	protected float angle;
 	
 	EntityObserver entityObserver;
 	
 	EntityVisitor visitor;
-
-	BodyDef body;
 	
 	boolean textureOutOfDate;
 	
@@ -38,14 +36,13 @@ public class Entity {
 	public Entity()
 	{
 		batch = new SpriteBatch();
-		positionX = 0F;
-		positionY = 0F;
-		rotation = 0F;
+		position = new Vector2();
+		position.set(0F, 0F);
+		angle = 0F;
 		scale = 1F;
 		textureName = null;
 		textureOutOfDate = false;
 		animation = new EntityAnimation(this);
-        body = new BodyDef();
 	}
 
 	public Entity(String name) {
@@ -57,10 +54,6 @@ public class Entity {
 	{
 		return this.animation;
 	}
-    public BodyDef getBody()
-    {
-        return this.body;
-    }
 	
 	public void setTexture(String textureName, Texture texture)
 	{
@@ -102,24 +95,22 @@ public class Entity {
 	
 	public void setPosition(float posX, float posY)
 	{
-		positionX = posX;
-		positionY = posY;
+		position.set(posX, posY);
 	}
 	
 	public float getPositionX()
 	{
-		return positionX;
+		return position.x;
 	}
 	
 	public float getPositionY()
 	{
-		return positionY;
+		return position.y;
 	}
 	
 	public void move(float movX, float movY)
 	{
-		positionX += movX;
-		positionY += movY;
+		position.add(movX, movY);
 	}
 	
 	public void setScale(float factor)
@@ -139,17 +130,17 @@ public class Entity {
 	
 	public void setRotation(float angle)
 	{
-		rotation = angle;
+		this.angle = angle;
 	}
 	
 	public void rotate(float angle)
 	{
-		rotation += angle;
+		this.angle += angle;
 	}
 	
 	public float getRotation()
 	{
-		return rotation;
+		return angle;
 	}
 	
 	public void init()
@@ -198,13 +189,10 @@ public class Entity {
 		}
 		
 		this.animation.update();
-
-        this.body.position.set(positionX, positionY);
-        this.body.angle = (float)Math.toRadians(this.rotation);
 	
 		//translate down because of stupid libgdx bases the scaling off the bottom left corner
-		this.sprite.setPosition(positionX, positionY);
-		this.sprite.setRotation(rotation);
+		this.sprite.setPosition(position.x, position.y);
+		this.sprite.setRotation(angle);
 		this.sprite.setScale(scale);
 		
 		batch.setProjectionMatrix(Engine.getInstance().getEntityManager().getCamera().get().combined);

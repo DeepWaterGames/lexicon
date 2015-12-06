@@ -7,17 +7,19 @@ import net.deepwater.engine.Entity;
 import net.deepwater.engine.EntityObserver;
 
 public class PlayerMovementObserver extends EntityObserver {
-
-	private Vector2 acceleration;
 	private Vector2 velocity;
-	private boolean move;
-	double targetY;
+	private float angularVelocity;
+	private float lastProportional;
+	private float targetY;
+
+	private float kP = .025F;
+	private float kD = 2;
 	
 	public PlayerMovementObserver()
 	{
 		velocity = new Vector2();
-		acceleration = new Vector2();
-		move = false;
+		angularVelocity = 0F;
+		lastProportional = 0F;
 	}
 	
 	@Override
@@ -28,21 +30,23 @@ public class PlayerMovementObserver extends EntityObserver {
 	
 	@Override
 	public void onUpdate(Entity entity)
-	{	
-		if(move)
-		{
-			
+	{
+		float dt = Gdx.graphics.getDeltaTime();
+		dt = Math.max(dt, .01F);
+		velocity.x = 0;
+		float proportional = (targetY - entity.getPositionY());
+		float derivative = (proportional - lastProportional) / dt;
+		float u = kP * proportional + kP * derivative;
+		velocity.y +=  (-10*velocity.y + 50F * u) * dt;
+
+		entity.move(velocity.x * dt, velocity.y * dt);
+		entity.rotate(angularVelocity * dt);
+
+		if (entity.getPositionY() > Gdx.graphics.getHeight()) {
+			entity.setPosition(entity.getPositionX(), Gdx.graphics.getHeight());
 		}
-		
-		entity.move(4F, 0F);
-		entity.rotate(2F);
-		
-		if(entity.getPositionX() > 1900)
-		{
-			entity.setPosition(0F, 500F);
-		}
-		
-		//check for collisions here
+
+		System.out.println("Entity y: " + entity.getPositionY() + ", u: " + u + ", dt: " + dt);
 	}
 	
 	@Override
@@ -67,7 +71,8 @@ public class PlayerMovementObserver extends EntityObserver {
 	public boolean touchDown(Entity entity, int screenX, int screenY,
 			int pointer, int button) {
 		// TODO Auto-generated method stub
-		return super.touchDown(entity, screenX, screenY, pointer, button);
+		targetY = Gdx.graphics.getHeight()-screenY;
+		return true;
 	}
 
 	@Override
@@ -81,7 +86,7 @@ public class PlayerMovementObserver extends EntityObserver {
 	public boolean touchDragged(Entity entity, int screenX, int screenY,
 			int pointer) {
 		// TODO Auto-generated method stub
-		targetY = screenY / Gdx.graphics.getHeight();
+		targetY = Gdx.graphics.getHeight()-screenY;
 //		return super.touchDragged(entity, screenX, screenY, pointer);
 		return true;
 	}
@@ -89,10 +94,7 @@ public class PlayerMovementObserver extends EntityObserver {
 	@Override
 	public boolean mouseMoved(Entity entity, int screenX, int screenY) {
 		// TODO Auto-generated method stub
-		float magnitude = (float) Math.sqrt((float)((screenX * screenX) + (screenY * screenY)));
-		float x = screenX / magnitude;
-		float y = screenY / magnitude;
-		entity.move(x * velocity.x, y * velocity.y);
+		targetY = Gdx.graphics.getHeight()-screenY;
 		return true;
 	}
 
