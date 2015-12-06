@@ -2,6 +2,7 @@ package net.deepwater.lexicon;
 
 import com.badlogic.gdx.ApplicationAdapter;
 
+import net.deepwater.engine.CameraObserver;
 import net.deepwater.engine.Engine;
 import net.deepwater.engine.Entity;
 import net.deepwater.engine.OverlayScreen;
@@ -17,6 +18,8 @@ public class LexiconGame extends ApplicationAdapter {
 
 		engine.getEntityManager().getCamera().get().translate(50, 0);
 
+        engine.getEntityManager().getCamera().setCameraObserver(new CameraObserver());
+
 		Entity player = engine.getEntityManager().createEntity("Bob");
 		player.setTextureName("badlogic.jpg");
 		new PlayerMovementObserver();
@@ -25,7 +28,7 @@ public class LexiconGame extends ApplicationAdapter {
 		OverlayScreen screen = engine.getOverlayManager().createOverlayScreen(true);
 		Entity panel = screen.createPanelEntity("Fred");
 		panel.setTextureName("badlogic.jpg");
-		panel.setPosition(0, 500);
+		panel.setPosition(0, 0);
 	}
 
 	@Override

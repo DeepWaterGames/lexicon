@@ -53,6 +53,8 @@ public class Engine
 	
 	public boolean start()
 	{
+		eventManager = new EventManager();
+
 		entityManager = new EntityManager();
 		
 		assetManager = new AssetManager();
@@ -60,8 +62,6 @@ public class Engine
 		background = new Background();
 		
 		overlayManager = new OverlayManager();
-		
-		eventManager = new EventManager();
 
         inputProcessor = new InputProcessor();
 

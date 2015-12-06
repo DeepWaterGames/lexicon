@@ -30,6 +30,8 @@ public class Entity {
 	EntityVisitor visitor;
 	
 	boolean textureOutOfDate;
+
+	boolean isOverlay;
 	
 	EntityAnimation animation;
 	
@@ -61,6 +63,16 @@ public class Entity {
 		this.texture = texture;
 		this.sprite = new Sprite(this.texture);
 		this.bounds = this.sprite.getBoundingRectangle();
+	}
+
+	public void setOverlay(boolean overlay)
+	{
+		this.isOverlay = overlay;
+	}
+
+	public boolean isOverlay()
+	{
+		return this.isOverlay;
 	}
 	
 	public Texture getTexture()
@@ -159,7 +171,6 @@ public class Entity {
 		this.texture = Engine.getInstance().getAssetManager().get(textureName, Texture.class);
 		if(this.texture == null)
 		{
-			System.out.println("Could not load " + textureName);
 			return;
 		}
 		
@@ -190,12 +201,18 @@ public class Entity {
 		
 		this.animation.update();
 	
-		//translate down because of stupid libgdx bases the scaling off the bottom left corner
-		this.sprite.setPosition(position.x, position.y);
+		// TODO(Nick) translate down because of stupid libgdx bases the scaling off the bottom left corner
+		this.sprite.setPosition(position.x - this.sprite.getWidth() / 2, position.y - this.sprite.getHeight() / 2);
 		this.sprite.setRotation(angle);
 		this.sprite.setScale(scale);
-		
-		batch.setProjectionMatrix(Engine.getInstance().getEntityManager().getCamera().get().combined);
+
+		if(isOverlay()) {
+			batch.setProjectionMatrix(Engine.getInstance().getEntityManager().getOverlayCamera().combined);
+		}
+		else
+		{
+			batch.setProjectionMatrix(Engine.getInstance().getEntityManager().getCamera().get().combined);
+		}
 		
 		if(this.entityObserver != null)
 		{

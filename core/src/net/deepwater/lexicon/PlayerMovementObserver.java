@@ -3,6 +3,7 @@ package net.deepwater.lexicon;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 
+import net.deepwater.engine.Engine;
 import net.deepwater.engine.Entity;
 import net.deepwater.engine.EntityObserver;
 
@@ -33,7 +34,7 @@ public class PlayerMovementObserver extends EntityObserver {
 	{
 		float dt = Gdx.graphics.getDeltaTime();
 		dt = Math.max(dt, .01F);
-		velocity.x = 0;
+		velocity.x = 50;
 		float proportional = (targetY - entity.getPositionY());
 		float derivative = (proportional - lastProportional) / dt;
 		float u = kP * proportional + kP * derivative;
@@ -42,11 +43,8 @@ public class PlayerMovementObserver extends EntityObserver {
 		entity.move(velocity.x * dt, velocity.y * dt);
 		entity.rotate(angularVelocity * dt);
 
-		if (entity.getPositionY() > Gdx.graphics.getHeight()) {
-			entity.setPosition(entity.getPositionX(), Gdx.graphics.getHeight());
-		}
-
-		System.out.println("Entity y: " + entity.getPositionY() + ", u: " + u + ", dt: " + dt);
+		PlayerPositionEvent evt = new PlayerPositionEvent(new Vector2(entity.getPositionX(), entity.getPositionY()));
+		Engine.getInstance().getEventManager().queueEvent(evt);
 	}
 	
 	@Override

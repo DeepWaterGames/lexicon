@@ -17,6 +17,7 @@ public class OverlayScreen
 	public Entity createPanelEntity()
 	{
 		Entity panel = new Entity();
+		panel.setOverlay(true);
 		panels.add(panel);
 		return panel;
 	}
@@ -24,6 +25,7 @@ public class OverlayScreen
 	public Entity createPanelEntity(String name)
 	{
 		Entity panel = new Entity();
+		panel.setOverlay(true);
 		panel.setName(name);
 		panels.add(panel);
 		return panel;

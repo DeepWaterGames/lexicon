@@ -4,7 +4,7 @@ public class EventListener
 {
 	public EventListener()
 	{
-		Engine.getInstance().getEventManager().registerEvent("net.deepwater.engine.BaseEventData", this);
+		Engine.getInstance().getEventManager().registerEventListener(BaseEventData.class.getName(), this);
 	}
 	
 	public void handleEvent(BaseEventData event) {}

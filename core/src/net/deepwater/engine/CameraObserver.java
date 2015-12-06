@@ -1,15 +1,23 @@
 package net.deepwater.engine;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
+import net.deepwater.lexicon.PlayerPositionEvent;
+
 public class CameraObserver
 {
+    CameraEventListener evtListener;
+    float lastX;
     public CameraObserver()
     {
-
+        evtListener = new CameraEventListener();
+        lastX = -100;
     }
 
     public void onUpdate(Camera camera)
     {
-
+        camera.get().position.set(evtListener.playerPosition.x + Gdx.graphics.getWidth() * .3F, camera.get().position.y, camera.get().position.z);
     }
 
     public boolean keyDown(Camera Camera, int keycode) {
@@ -50,5 +58,19 @@ public class CameraObserver
     public boolean scrolled(Camera camera, int amount) {
         // TODO Auto-generated method stub
         return false;
+    }
+
+    private class CameraEventListener extends EventListener {
+        public Vector2 playerPosition = new Vector2();
+        public CameraEventListener() {
+             Engine.getInstance().getEventManager().registerEventListener(PlayerPositionEvent.class.getName(), this);
+        }
+
+        @Override
+        public void handleEvent(BaseEventData data) {
+            if (data.getName() == PlayerPositionEvent.class.getName()) {
+                playerPosition = ((PlayerPositionEvent)data).position;
+            }
+        }
     }
 }

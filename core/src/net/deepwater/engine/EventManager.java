@@ -16,7 +16,7 @@ public class EventManager
 		eventQueue = new ArrayList<BaseEventData>();
 	}
 	
-	public void registerEvent(String eventType, EventListener listener)
+	public void registerEventListener(String eventType, EventListener listener)
 	{
 		if(eventMap.get(eventType) == null)
 		{
@@ -31,7 +31,7 @@ public class EventManager
 		}
 	}
 	
-	public void unregisterEvent(String eventType, EventListener listener)
+	public void unregisterEventListener(String eventType, EventListener listener)
 	{
 		if(eventMap.get(eventType) == null)
 		{

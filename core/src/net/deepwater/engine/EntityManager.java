@@ -1,21 +1,32 @@
 package net.deepwater.engine;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+
 import java.util.*;
 
 public class EntityManager {
     private ArrayList<Entity> entities;
     private Camera camera;
+	private com.badlogic.gdx.graphics.OrthographicCamera overlayCamera;
 
     public EntityManager() {
         // TODO Auto-generated constructor stub
         entities = new ArrayList<Entity>();
         camera = new Camera();
+		overlayCamera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		overlayCamera.translate(overlayCamera.viewportWidth / 2, overlayCamera.viewportHeight / 2);
     }
 
-    public Camera getCamera() {
-        //this has to be an net.deepwater.engine.Entity but...
-        return this.camera;
-    }
+	public Camera getCamera() {
+		//this has to be an net.deepwater.engine.Entity but...
+		return this.camera;
+	}
+
+	public OrthographicCamera getOverlayCamera() {
+		//this has to be an net.deepwater.engine.Entity but...
+		return this.overlayCamera;
+	}
 	
 	public Entity createEntity()
 	{
