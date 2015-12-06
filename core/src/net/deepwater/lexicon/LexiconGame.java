@@ -11,7 +11,7 @@ public class LexiconGame extends ApplicationAdapter {
 	Engine engine;
 	
 	@Override
-	public void create () {
+	public void create ()  {
 		engine = Engine.getInstance();
 		engine.start();
 		engine.setDisplayMode(1920, 1080, false);
@@ -21,18 +21,18 @@ public class LexiconGame extends ApplicationAdapter {
         engine.getEntityManager().getCamera().setCameraObserver(new CameraObserver());
 
 		Entity player = engine.getEntityManager().createEntity("Bob");
-		player.setTextureName("badlogic.jpg");
-		new PlayerMovementObserver();
+		player.setTextureName("Android/assets/badlogic.jpg");
 		player.setEntityObserver(new PlayerMovementObserver());
 
 		OverlayScreen screen = engine.getOverlayManager().createOverlayScreen(true);
 		Entity panel = screen.createPanelEntity("Fred");
-		panel.setTextureName("badlogic.jpg");
+		panel.setTextureName("Android/assets/badlogic.jpg");
 		panel.setPosition(0, 0);
 	}
 
 	@Override
 	public void render () {
+		AsteroidSpawner.getInstance().update();
 		engine.run();
 	}
 }

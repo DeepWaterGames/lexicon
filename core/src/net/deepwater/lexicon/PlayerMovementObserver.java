@@ -50,6 +50,7 @@ public class PlayerMovementObserver extends EntityObserver {
 	@Override
 	public boolean keyDown(Entity entity, int keycode) {
 		// TODO Auto-generated method stub
+		System.out.println("KeyDown");
 		return true;
 	}
 
