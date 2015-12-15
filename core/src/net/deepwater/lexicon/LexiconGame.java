@@ -12,6 +12,8 @@ public class LexiconGame extends ApplicationAdapter {
 	
 	@Override
 	public void create ()  {
+		//BaseGameManager.getInstance().getLoader().loadFromFile("config.txt");
+
 		engine = Engine.getInstance();
 		engine.start();
 		engine.setDisplayMode(1920, 1080, false);
