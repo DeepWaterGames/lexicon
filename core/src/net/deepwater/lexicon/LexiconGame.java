@@ -12,7 +12,8 @@ public class LexiconGame extends ApplicationAdapter {
 	
 	@Override
 	public void create ()  {
-		//BaseGameManager.getInstance().getLoader().loadFromFile("config.txt");
+		//BaseGameConfigLoader.getInstance().setGameManager(...);
+		//BaseGameConfigLoader.getInstance().
 
 		engine = Engine.getInstance();
 		engine.start();

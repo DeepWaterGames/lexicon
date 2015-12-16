@@ -12,12 +12,12 @@ import java.util.Vector;
  * Created by nickc on 12/8/2015.
  */
 
-//handles progression thru game level
+//handles progression thru game level/dumping ground lol
 public class BaseGameManager {
 
     private static BaseGameManager gameManager = new BaseGameManager();
 
-    private class DistanceAction
+    public class DistanceAction
     {
         BaseEventData event;
         float playerDistance;
@@ -26,7 +26,7 @@ public class BaseGameManager {
         boolean repeat;
     }
 
-    private class TimedAction
+    public class TimedAction
     {
         BaseEventData event;
         double time;
@@ -34,8 +34,6 @@ public class BaseGameManager {
         double stop;
         boolean repeat;
     }
-
-    private BaseGameConfigLoader loader;
 
     private double elapsedTime;
     private double elapsedDistance;
@@ -51,8 +49,6 @@ public class BaseGameManager {
         elapsedDistance = 0;
         distanceBasedEvents = new Vector<DistanceAction>();
         timeBasedEvents = new Vector<TimedAction>();
-        loader = new BaseGameConfigLoader();
-        loader.setGameManager(this);
     }
 
     public void setPlayer(Entity player)
@@ -60,9 +56,9 @@ public class BaseGameManager {
         this.player = player;
     }
 
-    public BaseGameConfigLoader getLoader()
+    public void init()
     {
-        return this.loader;
+        //register events into factory
     }
 
     //an action is an event that is sent out if a player has reached a certain distance
