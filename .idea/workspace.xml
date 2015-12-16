@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcb52113-3c00-40b3-8e78-6ef17176832a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lexicon.iws" />
@@ -137,14 +134,14 @@
       <file leaf-file-name="BaseGameConfigLoader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14734636">
-              <caret line="136" column="47" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.400838">
+              <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#788#789#0" expanded="true" />
                 <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#5132#5133#0" expanded="true" />
-                <element signature="e#5161#5162#0" expanded="true" />
+                <element signature="e#5131#5132#0" expanded="true" />
+                <element signature="e#5160#5161#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3237,7 +3234,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450163372812</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="continued work on code">
+      <created>1450250306973</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1450250306973</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3302,7 +3305,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added basic asteroid spawning and it works :D" />
     <MESSAGE value="Added some ideas and modifcations in the code that you may like or add on to" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some ideas and modifcations in the code that you may like or add on to" />
+    <MESSAGE value="continued work on code" />
+    <option name="LAST_COMMIT_MESSAGE" value="continued work on code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3776,14 +3780,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14734636">
-          <caret line="136" column="47" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.400838">
+          <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5161#5162#0" expanded="true" />
+            <element signature="e#5131#5132#0" expanded="true" />
+            <element signature="e#5160#5161#0" expanded="true" />
           </folding>
         </state>
       </provider>

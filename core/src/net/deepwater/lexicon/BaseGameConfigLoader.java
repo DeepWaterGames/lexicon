@@ -125,7 +125,7 @@ public class BaseGameConfigLoader
         double i = interval.equals("-") ? -1 : Double.valueOf(interval);
         double e = end.equals("-") ? -1 : Double.valueOf(end);
 
-        Class a = Class.forName(action);
+        Class a = Class.forName(event);
         BaseEventData eventData = (BaseEventData) a.newInstance();
 
         if(type == 0)
