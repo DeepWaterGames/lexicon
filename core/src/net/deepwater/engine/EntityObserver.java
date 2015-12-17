@@ -1,6 +1,7 @@
 package net.deepwater.engine;
 
-public class EntityObserver
+//so it can recieve events and control the entity at the same time
+public class EntityObserver extends EventListener
 {
 	public EntityObserver()
 	{

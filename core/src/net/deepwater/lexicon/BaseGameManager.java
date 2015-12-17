@@ -6,6 +6,7 @@ import net.deepwater.engine.BaseEventData;
 import net.deepwater.engine.Entity;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Vector;
 
 /**
@@ -44,21 +45,20 @@ public class BaseGameManager {
 
     private Vector<TimedAction> timeBasedEvents;
 
+    private Vector<Spawner> spawners;
+
     BaseGameManager() {
         elapsedTime = 0;
         elapsedDistance = 0;
         distanceBasedEvents = new Vector<DistanceAction>();
         timeBasedEvents = new Vector<TimedAction>();
+        spawners = new Vector<Spawner>();
+        //add spawners here
     }
 
     public void setPlayer(Entity player)
     {
         this.player = player;
-    }
-
-    public void init()
-    {
-        //register events into factory
     }
 
     //an action is an event that is sent out if a player has reached a certain distance
@@ -148,6 +148,13 @@ public class BaseGameManager {
 
     public void update()
     {
+        Iterator<Spawner> spawnIter = spawners.iterator();
+        while(spawnIter.hasNext())
+        {
+            Spawner spawner = spawnIter.next();
+            spawner.update();
+        }
+
         elapsedTime += Gdx.graphics.getDeltaTime();
         elapsedDistance += player.getPositionX();
     }

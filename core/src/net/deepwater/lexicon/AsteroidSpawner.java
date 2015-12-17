@@ -5,7 +5,7 @@ import java.util.*;
 import net.deepwater.engine.*;
 import net.deepwater.engine.EventListener;
 
-public class AsteroidSpawner extends EventListener
+public class AsteroidSpawner extends Spawner
 {
     protected int maxNumBarriers = 10;
     protected int spawnRate = 40; //40%
@@ -26,6 +26,7 @@ public class AsteroidSpawner extends EventListener
 		maxNumBarriers += ((IncreaseBarriersEvent)event).getAmount();
 	}*/
 
+    @Override
     public void update()
     {
         float position = 0;

@@ -13,7 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcb52113-3c00-40b3-8e78-6ef17176832a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/Spawner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/EntityObserver.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/EntityObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lexicon.iws" />
@@ -52,17 +55,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseGameManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseGameManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.76955307">
+              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#3960#3961#0" expanded="true" />
-                <element signature="e#3994#3995#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="e#1352#1353#0" expanded="true" />
+                <element signature="e#3799#3800#0" expanded="true" />
+                <element signature="e#3826#3827#0" expanded="true" />
+                <element signature="e#4214#4215#0" expanded="true" />
+                <element signature="e#4248#4249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,16 +83,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameStatePlay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/GameStatePlay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LexiconGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,44 +93,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerPositionEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/PlayerPositionEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AsteroidSpawner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
-                <element signature="e#479#480#0" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EventManager.java">
+      <file leaf-file-name="EntityObserver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EntityObserver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseGameConfigLoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CameraObserver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EntityManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseGameConfigLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.400838">
-              <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="125" column="49" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#788#789#0" expanded="true" />
@@ -2827,12 +2832,14 @@
         <option value="$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/engine/Entity.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/engine/EventManager.java" />
-        <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/GameProgressionManager.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/GenericObjectFactory.java" />
-        <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" />
         <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" />
+        <option value="$PROJECT_DIR$/core/src/net/deepwater/engine/EntityObserver.java" />
+        <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/Spawner.java" />
+        <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" />
+        <option value="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" />
       </list>
     </option>
   </component>
@@ -3240,7 +3247,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450250306973</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="continued work on code">
+      <created>1450250384504</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1450250384504</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3317,14 +3330,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/GameStatePlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3346,8 +3351,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3442,8 +3447,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3643,16 +3648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3665,16 +3660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38385502">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3745,17 +3730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.943397">
@@ -3764,30 +3738,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#3994#3995#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.400838">
-          <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="49" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#830#831#0" expanded="true" />
             <element signature="e#5131#5132#0" expanded="true" />
             <element signature="e#5160#5161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EntityObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/Spawner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23044693">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/engine/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76955307">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3826#3827#0" expanded="true" />
+            <element signature="e#4214#4215#0" expanded="true" />
+            <element signature="e#4248#4249#0" expanded="true" />
           </folding>
         </state>
       </provider>
