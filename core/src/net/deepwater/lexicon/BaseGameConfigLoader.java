@@ -15,14 +15,14 @@ import java.util.Vector;
 
 import sun.nio.cs.ArrayDecoder;
 
-import static net.deepwater.lexicon.BaseGameManager.*;
+import static net.deepwater.lexicon.GameStatePlay.*;
 
 /**
  * Created by nickc on 12/8/2015.
  */
 public class BaseGameConfigLoader
 {
-    private BaseGameManager gameManager;
+    private GameStatePlay gameManager;
 
     private static BaseGameConfigLoader loader = new BaseGameConfigLoader();
 
@@ -30,7 +30,7 @@ public class BaseGameConfigLoader
     {
     }
 
-    public void setGameManager(BaseGameManager manager)
+    public void setGameManager(GameStatePlay manager)
     {
         this.gameManager = manager;
     }
@@ -132,30 +132,30 @@ public class BaseGameConfigLoader
         {
             if((s > -1) && (i > -1) && e > -1)
             {
-                BaseGameManager.getInstance().setAction((float) s, (float) i, (float) e, eventData);
+                GameStatePlay.getInstance().setAction((float) s, (float) i, (float) e, eventData);
             }
             else if((s > -1) && (i > -1) && (e == -1))
             {
-               BaseGameManager.getInstance().setAction((float) s, (float) i, eventData);
+                GameStatePlay.getInstance().setAction((float) s, (float) i, eventData);
             }
             else if((s > -1) && (i == -1) && (e == -1))
             {
-                BaseGameManager.getInstance().setAction((float) s, eventData);
+                GameStatePlay.getInstance().setAction((float) s, eventData);
             }
         }
         else if(type == 1)
         {
             if((s > -1) && (i > -1) && e > -1)
             {
-                BaseGameManager.getInstance().setTimedAction((double) s, (double) i, (double) e, eventData);
+                GameStatePlay.getInstance().setTimedAction((double) s, (double) i, (double) e, eventData);
             }
             else if((s > -1) && (i > -1) && (e == -1))
             {
-                BaseGameManager.getInstance().setTimedAction((double) s, (double) i, eventData);
+                GameStatePlay.getInstance().setTimedAction((double) s, (double) i, eventData);
             }
             else if((s > -1) && (i == -1) && (e == -1))
             {
-                BaseGameManager.getInstance().setTimedAction((double) s, eventData);
+                GameStatePlay.getInstance().setTimedAction((double) s, eventData);
             }
         }
     }

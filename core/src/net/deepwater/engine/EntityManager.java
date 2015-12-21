@@ -82,6 +82,11 @@ public class EntityManager {
 			count++;
 		}
 	}
+
+	public void clearEntities()
+	{
+		entities.clear();
+	}
 	
 	public Entity getEntity(String name)
 	{

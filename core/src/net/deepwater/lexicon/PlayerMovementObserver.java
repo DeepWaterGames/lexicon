@@ -15,12 +15,36 @@ public class PlayerMovementObserver extends EntityObserver {
 
 	private float kP = .025F;
 	private float kD = 2;
+
+	//normally, component architecture would be used here
+	float health  = 100; //100% health
+	float armor = 0; //0% resistance
 	
 	public PlayerMovementObserver()
 	{
 		velocity = new Vector2();
 		angularVelocity = 0F;
 		lastProportional = 0F;
+	}
+
+	public void setHealth(float health)
+	{
+		this.health = health;
+	}
+
+	public float getHealth()
+	{
+		return this.health;
+	}
+
+	public void setArmor(float armor)
+	{
+		this.armor = armor;
+	}
+
+	public float getArmor(float armor)
+	{
+		return this.armor;
 	}
 	
 	@Override
@@ -45,6 +69,11 @@ public class PlayerMovementObserver extends EntityObserver {
 
 		PlayerPositionEvent evt = new PlayerPositionEvent(new Vector2(entity.getPositionX(), entity.getPositionY()));
 		Engine.getInstance().getEventManager().queueEvent(evt);
+
+		if(this.health == 0)
+		{
+			//send out player destroyed event
+		}
 	}
 	
 	@Override

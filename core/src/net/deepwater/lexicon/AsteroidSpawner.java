@@ -13,18 +13,19 @@ public class AsteroidSpawner extends Spawner
 
     protected ArrayList<Entity> barriers;
 
-    protected static AsteroidSpawner spawner = new AsteroidSpawner();
-
     public AsteroidSpawner()
     {
         barriers = new ArrayList<Entity>();
     }
 
-	/*@Override
+	@Override
 	public void handleEvent(BaseEventData event)
 	{
-		maxNumBarriers += ((IncreaseBarriersEvent)event).getAmount();
-	}*/
+        if(event.getName().equals("EventIncreaseAsteroidSpawn"))
+        {
+            maxNumBarriers += ((EventIncreaseAsteroidSpawn) event).amount;
+        }
+	}
 
     @Override
     public void update()
@@ -49,10 +50,5 @@ public class AsteroidSpawner extends Spawner
 
         //TODO: loop thru and if the asteroid is outta camera sight, then delete it from entity manager
 
-    }
-
-    public static AsteroidSpawner getInstance()
-    {
-        return spawner;
     }
 }

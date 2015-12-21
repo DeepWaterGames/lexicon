@@ -5,6 +5,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 import net.deepwater.engine.CameraObserver;
 import net.deepwater.engine.Engine;
 import net.deepwater.engine.Entity;
+import net.deepwater.engine.GameStateManager;
 import net.deepwater.engine.OverlayScreen;
 
 public class LexiconGame extends ApplicationAdapter {
@@ -12,8 +13,7 @@ public class LexiconGame extends ApplicationAdapter {
 	
 	@Override
 	public void create ()  {
-		//BaseGameConfigLoader.getInstance().setGameManager(...);
-		//BaseGameConfigLoader.getInstance().
+		//GameStatePlay.getInstance().setAction(1000, new EventIncreaseAsteroidSpawn(50));
 
 		engine = Engine.getInstance();
 		engine.start();
@@ -35,7 +35,8 @@ public class LexiconGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {
-		AsteroidSpawner.getInstance().update();
+		//baseGameManager.run();
+		//GameStateManager.getInstance().update(1000);
 		engine.run();
 	}
 }
