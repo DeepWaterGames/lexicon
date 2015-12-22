@@ -10,40 +10,18 @@ import net.deepwater.engine.GameStateManager;
 public class BaseGameManager extends EventListener {
     private static BaseGameManager gameManager = new BaseGameManager();
 
-    protected enum GameStateEnum {
-        GAME_STATE_PLAY,
-        GAME_STATE_MENU,
-        GAME_STATE_LOAD;
-    }
-
-    public int getInt(GameStateEnum state)
-    {
-        switch(state)
-        {
-            case GAME_STATE_PLAY:
-                return 0;
-            case GAME_STATE_MENU:
-                return 1;
-            case GAME_STATE_LOAD:
-                return 2;
-            default:
-                return -1;
-        }
-    }
-
     public BaseGameManager()
     {
-        GameStateManager.getInstance().addState(new GameStatePlay());
-        GameStateManager.getInstance().addState(new GameStateMenu());
+        GameStateManager.getInstance().start(new GameStatePlay());
     }
 
     @Override
     public void handleEvent(BaseEventData event)
     {
-        String eventName = event.getName();
-        if(eventName.equals("EventStartGameStatePlay"))
+        String eventName = event.getClass().getName();
+        if(eventName.equals(""))
         {
-            GameStateManager.getInstance().setActiveState(getInt(GameStateEnum.GAME_STATE_PLAY));
+//            GameStateManager.getInstance().setActiveState(getInt(GameStateEnum.GAME_STATE_PLAY));
         }
     }
 

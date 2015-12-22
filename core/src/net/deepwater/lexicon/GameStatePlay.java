@@ -21,8 +21,6 @@ import java.util.Vector;
 //change this to game state play
 public class GameStatePlay extends GameState {
 
-    private static GameStatePlay gameManager = new GameStatePlay();
-
     public class DistanceAction
     {
         BaseEventData event;
@@ -62,14 +60,17 @@ public class GameStatePlay extends GameState {
         spawners = new Vector<Spawner>();
         //add spawners here
         spawners.add(new AsteroidSpawner());
+        setAction(1000, 200, 2000, new EventChangePlayerHealth());
+        Engine.getInstance().getEventManager().registerEventListener(EventChangePlayerHealth.class.getName(), this);
     }
 
     @Override
     public void handleEvent(BaseEventData event)
     {
-        if(event.getName().equals("EventPlayerDestroyed"))
+        if(event.getClass().getName().equals(EventChangePlayerHealth.class.getName()))
         {
             //now send out event that GameStatePlay is over and switch to GameStateMenu
+            System.out.println("RSTHGFDGDFDHFGDHFGDGHFGHF");
         }
     }
 
@@ -152,43 +153,22 @@ public class GameStatePlay extends GameState {
     {
         Vector<BaseEventData> events = new Vector<BaseEventData>();
 
-        Iterator<DistanceAction> iter = distanceBasedEvents.iterator();
-        while(iter.hasNext()) {
-            DistanceAction action = iter.next();
+        for (DistanceAction action : distanceBasedEvents) {
             if (this.elapsedDistance >= action.playerDistance)
             {
-                if((action.repeat == false) && (action.numTimesRepeated == 0))
+                if(action.repeat == false && action.numTimesRepeated == 0)
                 {
                     events.add(action.event);
                     action.numTimesRepeated++;
                 }
-                else if((action.repeat == true && (action.numTimesRepeated == 0)))
+                else if(action.repeat == true)
                 {
-                    events.add(action.event);
-                    action.numTimesRepeated++;
-                }
-                else if((action.repeat == true) && (action.numTimesRepeated > 0) && (action.interval != -1))
-                {
-                    float distance = action.playerDistance;
-                    for(int i = 0; i < action.numTimesRepeated; i++)
-                    {
-                        distance +=  action.interval;
-                    }
-
-                    if(this.elapsedDistance >= distance)
-                    {
+                    if (action.interval == -1 || action.numTimesRepeated % action.interval == 0)
                         events.add(action.event);
-                        action.numTimesRepeated++;
-                    }
-                }
-                else if((action.repeat == true) && (action.numTimesRepeated > 0) && (action.interval == -1))
-                {
-                    events.add(action.event);
                     action.numTimesRepeated++;
                 }
             }
         }
-
         return events;
     }
 
@@ -196,9 +176,7 @@ public class GameStatePlay extends GameState {
     {
         Vector<BaseEventData> events = new Vector<BaseEventData>();
 
-        Iterator<TimedAction> iter = timeBasedEvents.iterator();
-        while(iter.hasNext()) {
-            TimedAction action = iter.next();
+        for (TimedAction action : timeBasedEvents) {
             if (this.elapsedTime >= action.time)
             {
                 if((action.repeat == false) && (action.numTimesRepeated == 0))
@@ -206,28 +184,10 @@ public class GameStatePlay extends GameState {
                     events.add(action.event);
                     action.numTimesRepeated++;
                 }
-                else if((action.repeat == true && (action.numTimesRepeated == 0)))
+                else if(action.repeat == true)
                 {
-                    events.add(action.event);
-                    action.numTimesRepeated++;
-                }
-                else if((action.repeat == true) && (action.numTimesRepeated > 0) && (action.interval != -1))
-                {
-                    double time = action.time;
-                    for(int i = 0; i < action.numTimesRepeated; i++)
-                    {
-                        time +=  action.interval;
-                    }
-
-                    if(this.elapsedTime >= time)
-                    {
+                    if (action.interval == -1 || action.numTimesRepeated % action.interval == 0)
                         events.add(action.event);
-                        action.numTimesRepeated++;
-                    }
-                }
-                else if((action.repeat == true) && (action.numTimesRepeated > 0) && (action.interval == -1))
-                {
-                    events.add(action.event);
                     action.numTimesRepeated++;
                 }
             }
@@ -240,29 +200,37 @@ public class GameStatePlay extends GameState {
     public void update(float dt)
     {
         //send out events
-        Vector<BaseEventData> distanceEvents = checkForDistanceBasedEvents();
-        Iterator<BaseEventData> deIter = distanceEvents.iterator();
-        while(deIter.hasNext())
+        for (BaseEventData evt : checkForDistanceBasedEvents())
         {
-            Engine.getInstance().getEventManager().triggerEvent(deIter.next());
+            System.out.println("Reached");
+            Engine.getInstance().getEventManager().queueEvent(evt);
         }
 
-        Vector<BaseEventData> timeEvents = checkForDistanceBasedEvents();
-        Iterator<BaseEventData> tIter = timeEvents.iterator();
-        while(tIter.hasNext())
+        for (BaseEventData evt : checkForTimeBasedEvents())
         {
-            Engine.getInstance().getEventManager().triggerEvent(tIter.next());
+            Engine.getInstance().getEventManager().queueEvent(evt);
         }
 
-        Iterator<Spawner> spawnIter = spawners.iterator();
-        while(spawnIter.hasNext())
-        {
-            Spawner spawner = spawnIter.next();
+        for (Spawner spawner : spawners) {
             spawner.update();
         }
 
+//        Vector<BaseEventData> timeEvents = checkForTimeBasedEvents();
+//        Iterator<BaseEventData> tIter = timeEvents.iterator();
+//        while(tIter.hasNext())
+//        {
+//            Engine.getInstance().getEventManager().triggerEvent(tIter.next());
+//        }
+//
+//        Iterator<Spawner> spawnIter = spawners.iterator();
+//        while(spawnIter.hasNext())
+//        {
+//            Spawner spawner = spawnIter.next();
+//            spawner.update();
+//        }
+
         elapsedTime += Gdx.graphics.getDeltaTime();
-        elapsedDistance += player.getPositionX();
+        elapsedDistance = player.getPositionX();
     }
 
     @Override
@@ -275,6 +243,8 @@ public class GameStatePlay extends GameState {
         Engine.getInstance().getEntityManager().getCamera().get().translate(50, 0);
         Engine.getInstance().getEntityManager().getCamera().setCameraObserver(new CameraObserver());
         player = Engine.getInstance().getEntityManager().createEntity("Player");
+        player.setTextureName("Android/assets/ship.png");
+        player.setEntityObserver(new PlayerMovementObserver());
     }
 
     @Override
@@ -294,10 +264,5 @@ public class GameStatePlay extends GameState {
         player = null;
         //wipe the spawners of entities
         //clean up everything
-    }
-
-    public static GameStatePlay getInstance()
-    {
-        return gameManager;
     }
 }

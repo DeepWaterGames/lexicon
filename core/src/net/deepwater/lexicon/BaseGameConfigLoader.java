@@ -1,21 +1,12 @@
 package net.deepwater.lexicon;
 
-import com.badlogic.gdx.graphics.g3d.particles.ParticleSorter;
-import com.sun.corba.se.impl.orbutil.ObjectUtility;
-import com.sun.deploy.util.ArrayUtil;
-
 import net.deepwater.engine.BaseEventData;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
-
-import sun.nio.cs.ArrayDecoder;
-
-import static net.deepwater.lexicon.GameStatePlay.*;
 
 /**
  * Created by nickc on 12/8/2015.
@@ -132,30 +123,29 @@ public class BaseGameConfigLoader
         {
             if((s > -1) && (i > -1) && e > -1)
             {
-                GameStatePlay.getInstance().setAction((float) s, (float) i, (float) e, eventData);
-            }
-            else if((s > -1) && (i > -1) && (e == -1))
+                gameManager.setAction((float) s, (float) i, (float) e, eventData);
+            } else if((s > -1) && (i > -1) && (e == -1))
             {
-                GameStatePlay.getInstance().setAction((float) s, (float) i, eventData);
+                gameManager.setAction((float) s, (float) i, eventData);
             }
             else if((s > -1) && (i == -1) && (e == -1))
             {
-                GameStatePlay.getInstance().setAction((float) s, eventData);
+                gameManager.setAction((float) s, eventData);
             }
         }
         else if(type == 1)
         {
             if((s > -1) && (i > -1) && e > -1)
             {
-                GameStatePlay.getInstance().setTimedAction((double) s, (double) i, (double) e, eventData);
+                gameManager.setTimedAction((double) s, (double) i, (double) e, eventData);
             }
             else if((s > -1) && (i > -1) && (e == -1))
             {
-                GameStatePlay.getInstance().setTimedAction((double) s, (double) i, eventData);
+                gameManager.setTimedAction((double) s, (double) i, eventData);
             }
             else if((s > -1) && (i == -1) && (e == -1))
             {
-                GameStatePlay.getInstance().setTimedAction((double) s, eventData);
+                gameManager.setTimedAction((double) s, eventData);
             }
         }
     }

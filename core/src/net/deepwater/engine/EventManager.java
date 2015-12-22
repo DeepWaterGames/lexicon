@@ -20,33 +20,19 @@ public class EventManager
 	{
 		if(eventMap.get(eventType) == null)
 		{
-			ArrayList<EventListener> list = new ArrayList<EventListener>();
-			list.add(listener);
-			eventMap.put(eventType, list);
+			eventMap.put(eventType, new ArrayList<EventListener>());
 		}
-		else
-		{
-			ArrayList<EventListener> list = eventMap.get(eventType);
-			list.add(listener);
-		}
+		eventMap.get(eventType).add(listener);
 	}
 	
 	public void unregisterEventListener(String eventType, EventListener listener)
 	{
-		if(eventMap.get(eventType) == null)
-		{
-			return;
-		}
-		else
-		{
-			ArrayList<EventListener> list = eventMap.get(eventType);
-			list.remove(listener);
-		}
+		eventMap.get(eventType).remove(listener);
 	}
 	
 	public void triggerEvent(BaseEventData event)
 	{
-		String eventType = event.getName();
+		String eventType = event.getClass().getName();
 		
 		if(eventMap.get(eventType) == null)
 		{
@@ -65,13 +51,9 @@ public class EventManager
 	
 	public void queueEvent(BaseEventData event)
 	{
-		String eventType = event.getName();
+		String eventType = event.getClass().getName();
 		
-		if(eventMap.get(eventType) == null)
-		{
-			return;
-		}
-		else
+		if(eventMap.get(eventType) != null)
 		{
 			eventQueue.add(event);
 		}
@@ -79,13 +61,9 @@ public class EventManager
 	
 	public void abortEvent(BaseEventData event)
 	{
-		String eventType = event.getName();
+		String eventType = event.getClass().getName();
 		
-		if(eventMap.get(eventType) == null)
-		{
-			return;
-		}
-		else
+		if(eventMap.get(eventType) != null)
 		{
 			eventQueue.remove(event);
 		}
@@ -93,19 +71,11 @@ public class EventManager
 	
 	public void update()
 	{
-		Iterator<BaseEventData> iter = eventQueue.iterator();
-		while(iter.hasNext())
+		for (BaseEventData event : eventQueue)
 		{
-			BaseEventData event = iter.next();
-			
-			String eventType = event.getName();
-			
-			ArrayList<EventListener> list = eventMap.get(eventType);
-			//iterate through list
-			Iterator<EventListener> listIter = list.iterator();
-			while(listIter.hasNext())
+			String eventType = event.getClass().getName();
+			for (EventListener listener : eventMap.get(eventType))
 			{
-				EventListener listener = listIter.next();
 				listener.handleEvent(event);
 			}
 		}

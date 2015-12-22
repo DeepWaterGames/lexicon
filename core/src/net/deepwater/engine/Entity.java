@@ -48,7 +48,7 @@ public class Entity {
 	}
 
 	public Entity(String name) {
-		// TODO Auto-generated constructor stub
+		this();
 		this.name = name;
 	}
 	

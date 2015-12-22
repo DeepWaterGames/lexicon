@@ -31,10 +31,4 @@ public class BasePanelEvent extends BaseEventData
 	{
 		return this.type;
 	}
-	
-	@Override
-	public String getName()
-	{
-		return "net.deepwater.engine.BasePanelEvent";
-	}
 }

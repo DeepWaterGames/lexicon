@@ -5,9 +5,4 @@ public class BaseEventData
 	public BaseEventData()
 	{
 	}
-	
-	public String getName()
-	{
-		return BaseEventData.class.getName();
-	}
 };

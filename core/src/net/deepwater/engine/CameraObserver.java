@@ -68,7 +68,7 @@ public class CameraObserver
 
         @Override
         public void handleEvent(BaseEventData data) {
-            if (data.getName() == PlayerPositionEvent.class.getName()) {
+            if (data.getClass().getName().equals(PlayerPositionEvent.class.getName())) {
                 playerPosition = ((PlayerPositionEvent)data).position;
             }
         }

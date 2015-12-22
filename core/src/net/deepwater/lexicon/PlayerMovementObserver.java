@@ -58,14 +58,15 @@ public class PlayerMovementObserver extends EntityObserver {
 	{
 		float dt = Gdx.graphics.getDeltaTime();
 		dt = Math.max(dt, .01F);
-		velocity.x = 50;
+		velocity.x = 500;
 		float proportional = (targetY - entity.getPositionY());
 		float derivative = (proportional - lastProportional) / dt;
 		float u = kP * proportional + kP * derivative;
 		velocity.y +=  (-10*velocity.y + 50F * u) * dt;
 
 		entity.move(velocity.x * dt, velocity.y * dt);
-		entity.rotate(angularVelocity * dt);
+		// entity.rotate(angularVelocity * dt);
+		entity.setRotation((float)Math.atan2(velocity.y, velocity.x)*180/3.14159F);
 
 		PlayerPositionEvent evt = new PlayerPositionEvent(new Vector2(entity.getPositionX(), entity.getPositionY()));
 		Engine.getInstance().getEventManager().queueEvent(evt);

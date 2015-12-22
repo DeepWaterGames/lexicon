@@ -12,10 +12,4 @@ public class EventIncreaseAsteroidSpawn extends BaseEventData {
     {
         this.amount = amount;
     }
-
-    @Override
-    public String getName()
-    {
-        return EventIncreaseAsteroidSpawn.class.getName();
-    }
 }

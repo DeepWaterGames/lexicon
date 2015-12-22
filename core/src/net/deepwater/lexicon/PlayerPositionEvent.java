@@ -12,8 +12,4 @@ public class PlayerPositionEvent extends BaseEventData {
         this.position = position;
     }
 
-    @Override
-    public String getName() {
-        return PlayerPositionEvent.class.getName();
-    }
 }
