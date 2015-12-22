@@ -12,63 +12,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: net.deepwater.lexicon.android" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcb52113-3c00-40b3-8e78-6ef17176832a" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\box2dlights_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_backend_android_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_backend_headless_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_backend_lwjgl_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_backend_robovm_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_box2d_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_box2d_platform_1_7_1_natives_desktop.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_box2d_platform_1_7_1_natives_ios.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_freetype_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_freetype_platform_1_7_1_natives_desktop.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_freetype_platform_1_7_1_natives_ios.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_platform_1_7_1_natives_desktop.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_platform_1_7_1_natives_ios.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\gdx_tools_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jinput_2_0_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jinput_platform_2_0_5_natives_linux.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jinput_platform_2_0_5_natives_osx.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jinput_platform_2_0_5_natives_windows.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jlayer_1_0_1_gdx.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jorbis_0_0_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\jutils_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\lwjgl_2_9_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\lwjgl_platform_2_9_2_natives_linux.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\lwjgl_platform_2_9_2_natives_osx.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\lwjgl_platform_2_9_2_natives_windows.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\lwjgl_util_2_9_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\robovm_cocoatouch_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\robovm_objc_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\GameDev\lexicon\.idea\libraries\robovm_rt_1_9_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/AsteroidSpawner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/BaseEventData.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/BaseEventData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameConfigLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/BaseGameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/BasePanelEvent.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/BasePanelEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/CameraObserver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/Engine.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/Engine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/Entity.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/EventIncreaseAsteroidSpawn.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/EventIncreaseAsteroidSpawn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/EventListener.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/EventListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/EventManager.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/EventManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/engine/GameStateManager.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/engine/GameStateManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/GameStatePlay.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/GameStatePlay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/LexiconGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/PlayerMovementObserver.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/PlayerMovementObserver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/PlayerPositionEvent.java" afterPath="$PROJECT_DIR$/core/src/net/deepwater/lexicon/PlayerPositionEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/core.iml" afterPath="$PROJECT_DIR$/core/core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/desktop.iml" afterPath="$PROJECT_DIR$/desktop/desktop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/ios.iml" afterPath="$PROJECT_DIR$/ios/ios.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexicon.iml" afterPath="$PROJECT_DIR$/lexicon.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+    <list default="true" id="fcb52113-3c00-40b3-8e78-6ef17176832a" name="Default" comment="Added textures, fixed spawning and other problems">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lexicon.iws" />
@@ -3331,7 +3275,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450333086352</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added textures, fixed spawning and other problems">
+      <created>1450773030645</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1450773030645</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3345,7 +3295,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3356,7 +3306,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968277" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20063359" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20063359" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3397,7 +3347,8 @@
     <MESSAGE value="Added basic asteroid spawning and it works :D" />
     <MESSAGE value="Added some ideas and modifcations in the code that you may like or add on to" />
     <MESSAGE value="continued work on code" />
-    <option name="LAST_COMMIT_MESSAGE" value="continued work on code" />
+    <MESSAGE value="Added textures, fixed spawning and other problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added textures, fixed spawning and other problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
